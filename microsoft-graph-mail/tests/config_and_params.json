@@ -1,0 +1,143 @@
+{
+    "config": [
+        {
+            "auth_type": "Without a User - Application Permission",
+            "resource": "https://graph.microsoft.com",
+            "tenant_id": "",
+            "client_id": "",
+            "client_secret": "",
+            "verify_ssl": true
+        }
+    ],
+    "get_unread_emails": [
+        {
+            "user_id": "user1@domain.com",
+            "source": "Folder Path",
+            "folder_id": "Inbox",
+            "mark_as_read": true,
+            "parse_inline": false,
+            "save_email": false,
+            "limit": 20
+        }
+    ],
+    "search_emails": [
+        {
+            "user_id": "user1@domain.com",
+            "source": "Folder Path",
+            "folder_id": "Inbox",
+            "odata_query": "$filter=isRead eq false",
+            "search": null,
+            "mark_read": true,
+            "parse_inline": "",
+            "limit": 20
+        }
+    ],
+    "get_folders": [
+        {
+            "user_id": "user1@domain.com",
+            "limit": 100
+        }
+    ],
+    "get_child_folders": [
+        {
+            "user_id": "user1@domain.com",
+            "source_folder": "Folder Path",
+            "folder_id": "Inbox",
+            "limit": 100
+        }
+    ],
+      "copy_email": [
+        {
+            "user_id": "user1@domain.com",
+            "destination_folder": "Folder Path",
+            "folder_id": "Inbox",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA="
+        }
+    ],
+    "move_email": [
+        {
+            "user_id": "user1@domain.com",
+            "destination_folder": "Folder Path",
+            "folder_id": "Inbox",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA="
+        }
+    ],
+    "delete_email": [
+        {
+            "user_id": "user1@domain.com",
+            "source": "Folder Path",
+            "folder_id": "Inbox",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA="
+        }
+    ],
+    "send_email": [
+        {
+            "from": "user1@domain.com",
+            "subject": "Test Email",
+            "to_recipients": "user2@domain.com",
+            "cc_recipients": null,
+            "bcc_recipients": null,
+            "body": "<p>Hello All,</p>\\n<p>Please Ignore this as a test email.</p>\\n<p>&nbsp;</p>\\n<p>&nbsp;</p>\\n<p>&nbsp;</p>\\n<p>Thanks,<br>FortiSOAR<br><br></p>",
+            "iri_list": null,
+            "flag": "Complete",
+            "importance": "Low"
+        }
+    ],
+    "forward_email": [
+        {
+            "to_recipients": "user2@do",
+            "from_recipients": "user1@domain.com",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA=",
+            "body": "Please check this"
+        }
+    ],
+    "send_email_as_reply": [
+        {
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FqAAA=",
+            "from_recipients": "user1@domain.com",
+            "to": "user2@domain.com",
+            "cc_recipients": null,
+            "bcc_recipients": null,
+            "body": "test email",
+            "iri_list": null
+        }
+    ],
+    "create_email_threat_submission": [
+        {
+            "input": "Email Content Threat Submission",
+            "@odata.type": "#microsoft.graph.security.emailContentThreatSubmission",
+            "category": "Spam",
+            "recipientEmailAddress": "user1@domain.com",
+            "fileContent": "X-MS-Exchange-Organization-Network-Message-Id:",
+            "other_params": null
+        }
+    ],
+    "get_email_categories": [
+        {
+            "user_id": "user1@domain.com",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA="
+        }
+    ],
+    "add_email_category": [
+        {
+            "user_id": "user1@domain.com",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA=",
+            "category": "test"
+        }
+    ],
+    "remove_email_category": [
+         {
+            "user_id": "user1@domain.com",
+            "message_id": "AAMkAGEwZjVmYzFkLWJmNjQtNDFmYi05NDhmLTYyODBkMzIzMWFlMwBGAAAAAAAyAAwoowFuSq3ZFJb1CDIYBwAMfifzahmUS72dWtqLcfb8AAAAAAEMAAAMfifzahmUS72dWtqLcfb8AAYGt3FrAAA=",
+            "category": "test"
+        }
+    ],
+    "execute_api_request": [
+        {
+            "endpoint": "/v1.0/users/user1@domain.com/mailFolders/inbox/messages",
+            "method": "GET",
+            "Query Parameters": null,
+            "payload": null
+        }
+    ]
+}
